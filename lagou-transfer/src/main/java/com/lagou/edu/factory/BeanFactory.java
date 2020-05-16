@@ -91,7 +91,6 @@ public class BeanFactory {
                 Element element =  components.get(i);
                 packageNames.add(element.attributeValue("package"));
             }
-//            packageNames.add("com.lagou.edu.service");
             Set<Class<?>> clazzs = new HashSet<>();
             for (String packageName : packageNames) {
                 clazzs.addAll(AnnotationUtils.getClasses(packageName));
